@@ -15,7 +15,7 @@ Tech Stack:
 
 How to Use:
 ------------
-1. Clone the repository: git clone [repo URL]
+1. Clone the repository: git clone [https://github.com/DynamicHarekrushna/random-user-generator.git]
 2. Open the index.html file in your browser.
 3. Click the "Generate User" button to fetch a new random user profile.
 
