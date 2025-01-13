@@ -1,15 +1,15 @@
-document.getElementById('generateButton').addEventListener('click', generateRandomUser);
+document.addEventListener('DOMContentLoaded', fetchRandomUser);
 
-function generateRandomUser() {
+function fetchRandomUser() {
     fetch('https://randomuser.me/api/')
         .then(response => response.json())
         .then(data => {
             const user = data.results[0];
-            document.getElementById('userAvatar').src = user.picture.large;
-            document.getElementById('userName').innerText = `${user.name.first}` `${user.name.last}`;
-            document.getElementById('userEmail').innerText = user.email;
-            document.getElementById('userLocation').innerText = `${user.location.city}`, `${user.location.country}`;
-            document.getElementById('userContainer').style.display = 'block';
+            document.getElementById('userImage').src = user.picture.large;
+            document.getElementById('userName').textContent = `${user.name.first} ${user.name.last}`;
+            document.getElementById('userEmail').textContent = user.email;
+            document.getElementById('userPhone').textContent = user.phone;
+            document.getElementById('userLocation').textContent = `${user.location.city}, ${user.location.state}, ${user.location.country}`;
         })
-        .catch(error => console.error('Error fetching user:',error));
+        .catch(error => console.error('Error fetching data:', error));
 }
