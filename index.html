@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">RandomUser</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">API</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
     <div class="container">
-        <h1>Random User Generator</h1>
-        <button id="generateButton">Generate Random User</button>
-        <div id="userContainer" class="user-container">
-            <img id="userAvatar" src="" alt="User Avatar">
-            <p id="userName"></p>
-            <p id="userEmail"></p>
-            <p id="userLocation"></p>
+        <h1>RANDOM USER GENERATOR</h1>
+        <p>A free, <a href="https://randomuser.me">open-source</a> API for generating random user data. Like Lorem Ipsum, but for people.</p>
+        <div class="user-card" id="userCard">
+            <div class="user-image">
+                <img src="" alt="User Image" id="userImage">
+            </div>
+            <div class="user-info">
+                <h2>Hi, My name is</h2>
+                <h3 id="userName"></h3>
+                <ul>
+                    <li>Email: <span id="userEmail"></span></li>
+                    <li>Phone: <span id="userPhone"></span></li>
+                    <li>Location: <span id="userLocation"></span></li>
+                </ul>
+            </div>
         </div>
+        <button onclick="fetchRandomUser()">Generate New User</button>
     </div>
     <script src="script.js"></script>
 </body>
